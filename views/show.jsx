@@ -25,6 +25,7 @@ function Show({ bread, index }) {
         <a href="/breads">
           <button>Go back to the index</button>
         </a>
+        <a href={`/breads/${index}/edit`}><button>Edit</button></a>
       </div>
     </Default>
   );
