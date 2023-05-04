@@ -18,8 +18,17 @@ function Show({ baker }) {
           return <li key={bread.id}>{bread.name}</li>;
         })}
       </ul>
+      <form action={`/bakers/${baker.id}?_method=DELETE`} method="POST">
+        <input type="submit" value="DELETE" />
+      </form>
     </Default>
   );
+  Model.find()
+  .populate({
+    path: 'fieldToPopulate',
+    options: { limit: 2 }
+  })
+
 }
 
 module.exports = Show;
